@@ -13,7 +13,7 @@ node {
         stage("ECHO COOL APP"){
             dir('terraform'){
                 sh 'echo COOLAPP-step-01'
-                sh 'echo ${env.GIT_TAG_NAME}'
+                sh "echo ${env.GIT_TAG_NAME}"
                 sh 'echo COOLAPP-step-02'
             }
         }  
