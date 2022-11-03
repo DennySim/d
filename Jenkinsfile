@@ -42,6 +42,7 @@ String gitTagName() {
 /** @return The tag message, or `null` if the current commit isn't a tag. */
 String gitTagMessage() {
     name = gitTagName()
+    desc = sh(script: "echo DIPLOMAWORK")
     msg = sh(script: "git tag -n10000 -l ${name}", returnStdout: true)?.trim()
     if (msg) {
         return msg.substring(name.size()+1, msg.size())
