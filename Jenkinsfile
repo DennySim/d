@@ -34,6 +34,7 @@ String gitTagName() {
         sh "echo DIPLOMAWORK_01"
         desc2 = sh(script: "echo DIPLOMAWORK_02")
         desc = sh(script: "git describe --tags ${commit}", returnStdout: true)?.trim()
+        sh "###TAG### ${desc}"
         if (isTag(desc)) {
             return desc
         }
