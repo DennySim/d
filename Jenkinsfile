@@ -31,6 +31,8 @@ node {
 String gitTagName() {
     commit = getCommit()
     if (commit) {
+        sh "echo DIPLOMAWORK_01"
+        desc2 = sh(script: "echo DIPLOMAWORK_02")
         desc = sh(script: "git describe --tags ${commit}", returnStdout: true)?.trim()
         if (isTag(desc)) {
             return desc
@@ -42,7 +44,6 @@ String gitTagName() {
 /** @return The tag message, or `null` if the current commit isn't a tag. */
 String gitTagMessage() {
     name = gitTagName()
-    desc = sh(script: "echo DIPLOMAWORK")
     msg = sh(script: "git tag -n10000 -l ${name}", returnStdout: true)?.trim()
     if (msg) {
         return msg.substring(name.size()+1, msg.size())
