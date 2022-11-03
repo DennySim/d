@@ -13,6 +13,7 @@ node {
             dir('terraform'){
       /**           sh 'echo ${env.GIT_TAG_NAME}'  */
                 sh 'echo COOLAPP'
+                sh 'echo COOLAPP'
             }
         }  
     }    
