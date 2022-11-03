@@ -1,8 +1,8 @@
 // Example usage
 node {
     git url: 'https://github.com/jenkinsci/git-tag-message-plugin'
-    /** env.GIT_TAG_NAME = gitTagName() */
-    env.GIT_TAG_NAME = "COOLTAG"
+    env.GIT_TAG_NAME = gitTagName()
+    /** env.GIT_TAG_NAME = "COOLTAG" */
     env.GIT_TAG_MESSAGE = gitTagMessage()
     
     
