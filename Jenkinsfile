@@ -11,9 +11,9 @@ node {
     if (env.GIT_TAG_NAME=='null'){
         stage("ECHO COOL APP"){
             dir('terraform'){
-      /**           sh 'echo ${env.GIT_TAG_NAME}'  */
-                sh 'echo COOLAPP'
-                sh 'echo COOLAPP'
+                sh 'echo COOLAPP-step-01'
+                sh 'echo ${env.GIT_TAG_NAME}'
+                sh 'echo COOLAPP-step-02'
             }
         }  
     }    
