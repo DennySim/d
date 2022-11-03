@@ -21,6 +21,7 @@ node {
     else{
         dir('terraform'){
             sh 'echo NOTCOOLAPP'
+            sh "echo ${env.GIT_TAG_NAME}"
         }
     }
     
