@@ -1,14 +1,14 @@
 // Example usage
 node {
     /** git url: 'https://github.com/jenkinsci/git-tag-message-plugin'  */
-    git url: 'https://github.com/DennySim/d.git'
+    git url: 'https://github.com/DennySim/d'
     env.GIT_TAG_NAME = gitTagName()
     /** env.GIT_TAG_NAME = "COOLTAG" */
     env.GIT_TAG_MESSAGE = gitTagMessage()
     
     
     stage("Git checkout"){
-        git branch: 'main', url: 'https://github.com/DennySim/d.git'
+        git branch: 'main', url: 'https://github.com/DennySim/d'
     }
     if (env.GIT_TAG_NAME=='null'){
         stage("ECHO COOL APP"){
