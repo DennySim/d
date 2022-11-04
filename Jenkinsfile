@@ -7,7 +7,7 @@ node {
     
     
     stage("Git checkout"){
-        git branch: 'main', url: 'https://github.com/DennySim/d'
+        git branch: 'main', url: 'https://github.com/DennySim/d.git'
     }
     if (env.GIT_TAG_NAME=='null'){
         stage("ECHO COOL APP"){
